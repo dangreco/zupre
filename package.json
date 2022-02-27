@@ -9,6 +9,7 @@
     "@typescript-eslint/parser": "^5.12.1",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.2",
@@ -25,7 +26,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "dev": "webpack serve --open --mode development",
-    "lint": "eslint",
+    "lint": "eslint \"src/**\"",
     "prepare": "husky install"
   },
   "dependencies": {

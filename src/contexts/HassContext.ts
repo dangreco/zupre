@@ -1,4 +1,4 @@
-import { createContext } from "preact";
+import { createContext } from 'preact';
 import { HomeAssistant } from 'custom-card-helpers';
 
 interface HassContextValues {

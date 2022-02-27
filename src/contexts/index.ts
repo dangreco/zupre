@@ -1,5 +1,6 @@
-import HassContext from "./HassContext";
+/* eslint-disable import/prefer-default-export */
+import HassContext from './HassContext';
 
 export {
   HassContext,
-}
+};
