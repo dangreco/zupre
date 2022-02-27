@@ -1,5 +1,5 @@
-import { useContext } from "preact/hooks";
-import { HassContext } from "../contexts";
+import { useContext } from 'preact/hooks';
+import { HassContext } from '@contexts';
 
 const usePerson = (id: string) => {
   const { hass } = useContext(HassContext);
@@ -7,6 +7,6 @@ const usePerson = (id: string) => {
   return Object.values(hass?.states || {}).find(
     (entity) => entity.entity_id === id || entity.attributes.user_id === id,
   );
-}
+};
 
 export default usePerson;

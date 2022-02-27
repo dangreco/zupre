@@ -8,5 +8,10 @@
     "moduleResolution": "node",
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
+    "baseUrl": "src/",
+    "paths": {
+      "@contexts": ["contexts/index.ts"],
+      "@hooks": ["hooks/index.ts"],
+    }
   }
 }

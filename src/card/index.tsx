@@ -1,6 +1,6 @@
 import { FunctionComponent } from "preact";
 import styled from "styled-components";
-import { useEntity, useUser } from "../hooks";
+import { useEntity, useUser } from "@hooks";
 
 const Card: FunctionComponent = () => {
   const user = useUser();
@@ -25,4 +25,4 @@ const Text = styled.p`
 
 const Root = styled.div`
   padding: 1rem;
-`
+`;
