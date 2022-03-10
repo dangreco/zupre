@@ -11,8 +11,6 @@
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"],
-      "@contexts": ["./src/contexts/index.ts"],
-      "@hooks": ["./src/hooks/index.ts"],
     }
   }
 }

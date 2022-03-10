@@ -1,9 +1,8 @@
-import useUser from './useUser';
-import usePerson from './usePerson';
+/* eslint-disable import/prefer-default-export */
 import useEntity from './useEntity';
+import useConfig from './useConfig';
 
 export {
-  useUser,
-  usePerson,
   useEntity,
+  useConfig,
 };

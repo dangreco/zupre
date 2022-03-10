@@ -1,23 +1,17 @@
+import { useConfig, useEntity } from 'hooks';
 import { FunctionComponent } from 'preact';
 import styled from 'styled-components';
-import { useEntity, useUser } from '@hooks';
 
 const Card: FunctionComponent = () => {
-  const user = useUser();
   const sun = useEntity('sun.sun');
+  const config = useConfig();
 
   return (
     <Root>
-      <Text>
-        Hello,
-        { user?.name }
-        {' '}
-        !
-      </Text>
+      <Text><b>{ sun?.attributes.friendly_name }</b></Text>
+      <Text>{ sun?.state }</Text>
       <pre>
-        The sun's state:
-        {' '}
-        { sun?.state }
+        { JSON.stringify(config || {}, null, 2) }
       </pre>
     </Root>
   );
@@ -26,8 +20,10 @@ const Card: FunctionComponent = () => {
 export default Card;
 
 const Text = styled.p`
-  color: var(--primary-color);
-  font-weight: bold;
+  & > b {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
 `;
 
 const Root = styled.div`

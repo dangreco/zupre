@@ -1,10 +1,11 @@
-import { useContext } from 'preact/hooks';
-import { HassContext } from '@contexts';
+import store from 'store';
+import { useCallback } from 'preact/hooks';
 
-const useEntity = (id: string) => {
-  const { hass } = useContext(HassContext);
-
-  return hass?.states[id];
-};
+const useEntity = (entityId: string) => store(
+  useCallback(
+    ({ hass }) => hass?.states[entityId],
+    [entityId],
+  ),
+);
 
 export default useEntity;
