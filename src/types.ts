@@ -1,3 +1,5 @@
-export interface Config {
-
+export type Config = {
+  type: string;
+} & {
+ // Your config goes here!
 }
