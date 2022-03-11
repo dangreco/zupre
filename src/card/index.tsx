@@ -1,13 +1,22 @@
-import { useConfig, useEntity } from 'hooks';
+import { useConfig, useEntity, useUser } from 'hooks';
 import { FunctionComponent } from 'preact';
 import styled from 'styled-components';
 
 const Card: FunctionComponent = () => {
   const sun = useEntity('sun.sun');
   const config = useConfig();
+  const user = useUser();
 
   return (
     <Root>
+      <Text>
+        <b>
+          Hi,
+          {' '}
+          { user?.name }
+          !
+        </b>
+      </Text>
       <Text><b>{ sun?.attributes.friendly_name }</b></Text>
       <Text>{ sun?.state }</Text>
       <pre>
